@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>routine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F3EF; --surface:#FFFFFF; --surface-raised:#FBFAF7;
+    --text:#232321; --text-dim:#8C8B85; --text-faint:#C7C6BE;
+    --accent:#5B8C7B; --accent-soft:rgba(91,140,123,.12);
+    --danger:#B0523E; --line:#E3E1D8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121212; --surface:#1A1A1A; --surface-raised:#1F1F1F;
+      --text:#D9D8D2; --text-dim:#77766F; --text-faint:#3A3A37;
+      --accent:#7FBBA6; --accent-soft:rgba(127,187,166,.14);
+      --danger:#D9836A; --line:#282826;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121212; --surface:#1A1A1A; --surface-raised:#1F1F1F;
+    --text:#D9D8D2; --text-dim:#77766F; --text-faint:#3A3A37;
+    --accent:#7FBBA6; --accent-soft:rgba(127,187,166,.14);
+    --danger:#D9836A; --line:#282826;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Mono',monospace;-webkit-font-smoothing:antialiased;}
+  ::selection{background:var(--accent);color:var(--surface);}
+  button,input,div[contenteditable]{font-family:inherit;}
+  input:focus,button:focus,[contenteditable]:focus{outline:none;}
+
+  /* ---------------- Login ---------------- */
+  #loginScreen{
+    min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+  }
+  .login-card{width:100%;max-width:320px;text-align:center;}
+  .login-brand{font-size:15px;color:var(--accent);font-weight:600;margin-bottom:6px;}
